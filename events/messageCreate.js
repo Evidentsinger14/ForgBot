@@ -6,6 +6,10 @@ client.on("messageCreate", async message => {
     if(message.content.toLowerCase().includes("forg")){
         await message.react("811558455721590808")
     }
+    if(message.mentions.members != null && !message.author.bot){
+        await message.react("800423202266021899")
+    }
+
     if(message.author.bot || !message.content.startsWith(prefix)) return;
     const args = message.content.slice(prefix.length).split(/ +/);
     const cmd = args.shift().toLowerCase();
