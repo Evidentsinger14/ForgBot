@@ -4,7 +4,7 @@ const BOT_ADMINS = process.env.BOT_ADMINS.split(',');
 module.exports.run = async (client, message, args) =>{
     console.log(BOT_ADMINS);
 
-    const senderIsAuthorized = null;
+    const senderIsAuthorized = BOT_ADMINS.includes(message.member.id)
 
 
     if(!senderIsAuthorized){
