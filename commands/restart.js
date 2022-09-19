@@ -1,5 +1,5 @@
 const { Message, MessageEmbed } = require("discord.js");
-const BOT_ADMINS = process.env.DISCORD_STAFF_ROLES.split(',');
+const BOT_ADMINS = process.env.BOT_ADMINS.split(',');
 
 module.exports.run = async (client, message, args) =>{
     const senderIsAuthorized = message.member.roles.cache.some(
