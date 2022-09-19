@@ -9,8 +9,7 @@ module.exports.run = async (client, message, args) =>{
         const embed = new MessageEmbed()
             .setColor("DARK_RED")
             .setDescription(`Restarting...`);
-        message.channel.send({ embeds: [embed]});
-        process.exit();
+        message.channel.send({ embeds: [embed]}).then(process.exit);
     }
 
 }
