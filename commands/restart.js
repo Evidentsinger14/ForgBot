@@ -5,9 +5,6 @@ module.exports.run = async (client, message, args) =>{
     const senderIsAuthorized = message.member.roles.cache.some(
         role => BOT_ADMINS.indexOf(role.name) !== -1
     );
-    if (senderIsAuthorized) {
-        return;
-    }
 
     if(!senderIsAuthorized){
         console.log(message.author.id + " Tried to restart. Don't worry, i didn't allow them.");
