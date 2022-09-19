@@ -7,6 +7,11 @@ client.on("messageCreate", async message => {
         await message.react("811558455721590808")
     }
 
+    //Pingn't
+    if(message.type === "REPLY" && message.mentions.members.first() === null){
+        await message.react("797601839717023744")
+    }
+
     if(message.mentions.members.first() != null && !message.author.bot){
         await message.react("800423202266021899")
     }
