@@ -12,8 +12,6 @@ client.on("messageCreate", async message => {
         await message.react("797601839717023744")
     }
 
-    console.log("LOGGER " + message.mentions.members.first() + " " + message.type);
-
     if(message.mentions.members.first() != null && !message.author.bot){
         await message.react("800423202266021899")
     }
