@@ -2,10 +2,9 @@ const { Message, MessageEmbed } = require("discord.js");
 const BOT_ADMINS = process.env.BOT_ADMINS.split(',');
 
 module.exports.run = async (client, message, args) =>{
-    const senderIsAuthorized = message.member.id(
-        user => BOT_ADMINS.indexOf(user.id) !== -1
-    );
+    console.log(BOT_ADMINS);
 
+    const senderIsAuthorized = null;
 
 
     if(!senderIsAuthorized){
