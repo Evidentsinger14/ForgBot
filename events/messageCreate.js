@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js")
 
 client.on("messageCreate", async message => {
     const prefix = process.env.PREFIX;
-    if(message.content.toLowerCase().includes("forg")){
+    if(message.content.toLowerCase().includes("forg") || message.content.toLowerCase().includes("brum brum")){
         await message.react("811558455721590808")
     }
 
