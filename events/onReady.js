@@ -4,11 +4,18 @@ const domain = process.env.PUSH_URL
 
 client.on("ready", async () => {
 
-    setInterval(function() {
-        https.get(`${domain}`, (response) =>{
-            // Don't really need to do anything, just want to make sure that this will actually keep an uptime.
-        });
-    }, 6 * 10000);
+     let check = true;
+        setInterval(function() {
+            if(check){
+                try{
+                    https.get(`${domain}`, () =>{
+                        // Don't really need to do anything, just want to make sure that this will actually keep an uptime.
+                    });
+                } catch (error){
+                    check = false;
+                }
+            }
+        }, 6 * 10000);
     console.log("Bot Ready...")
 
 })
